@@ -1,0 +1,104 @@
+DELIMITER //
+
+CREATE PROCEDURE Insert_Produtos (
+    IN p_sku VARCHAR(50),
+    IN p_product_name VARCHAR(255),
+    IN p_quantity INT,
+    IN p_currency VARCHAR(5),
+    IN p_item_price DECIMAL(10, 2)
+)
+BEGIN
+    INSERT INTO Produtos (sku, product_name, quantity, currency, item_price)
+    VALUES (p_sku, p_product_name, p_quantity, p_currency, p_item_price)
+    ON DUPLICATE KEY UPDATE 
+    product_name = VALUES(product_name),
+    quantity = VALUES(quantity),
+    currency = VALUES(currency),
+    item_price = VALUES(item_price);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE Insert_Clientes (
+    IN p_cpf VARCHAR(14),
+    IN p_buyer_email VARCHAR(255),
+    IN p_buyer_name VARCHAR(255),
+    IN p_buyer_phone_number VARCHAR(20)
+)
+BEGIN
+    INSERT INTO Clientes (cpf, buyer_email, buyer_name, buyer_phone_number)
+    VALUES (p_cpf, p_buyer_email, p_buyer_name, p_buyer_phone_number)
+    ON DUPLICATE KEY UPDATE 
+    buyer_email = VALUES(buyer_email),
+    buyer_name = VALUES(buyer_name),
+    buyer_phone_number = VALUES(buyer_phone_number);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE Insert_Pedidos (
+    IN p_order_id INT,
+    IN p_purchase_date DATE,
+    IN p_payments_date DATE,
+    IN p_buyer_email VARCHAR(255),
+    IN p_buyer_name VARCHAR(255),
+    IN p_cpf VARCHAR(14),
+    IN p_buyer_phone_number VARCHAR(20),
+    IN p_ship_service_level VARCHAR(255),
+    IN p_recipient_name VARCHAR(255),
+    IN p_ship_address_1 VARCHAR(255),
+    IN p_ship_address_2 VARCHAR(255),
+    IN p_ship_address_3 VARCHAR(255),
+    IN p_ship_city VARCHAR(255),
+    IN p_ship_state VARCHAR(255),
+    IN p_ship_postal_code VARCHAR(20),
+    IN p_ship_country VARCHAR(255),
+    IN p_ioss_number VARCHAR(255)
+)
+BEGIN
+    INSERT INTO Pedidos (
+        order_id, purchase_date, payments_date, buyer_email, buyer_name, cpf,
+        buyer_phone_number, ship_service_level, recipient_name, ship_address_1,
+        ship_address_2, ship_address_3, ship_city, ship_state, ship_postal_code,
+        ship_country, ioss_number
+    )
+    VALUES (
+        p_order_id, p_purchase_date, p_payments_date, p_buyer_email, p_buyer_name, p_cpf,
+        p_buyer_phone_number, p_ship_service_level, p_recipient_name, p_ship_address_1,
+        p_ship_address_2, p_ship_address_3, p_ship_city, p_ship_state, p_ship_postal_code,
+        p_ship_country, p_ioss_number
+    );
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE Insert_ItensPedido (
+    IN p_order_id INT,
+    IN p_sku VARCHAR(50),
+    IN p_quantity_purchased INT
+)
+BEGIN
+    INSERT INTO ItensPedido (order_id, sku, quantity_purchased)
+    VALUES (p_order_id, p_sku, p_quantity_purchased);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE Insert_MovimentacaoEstoque (
+    IN p_sku VARCHAR(50),
+    IN p_quantidade INT
+)
+BEGIN
+    INSERT INTO MovimentacaoEstoque (sku, quantidade)
+    VALUES (p_sku, p_quantidade);
+END //
+
+DELIMITER ;
