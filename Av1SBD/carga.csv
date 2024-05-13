@@ -1,4 +1,4 @@
-order-id;order-item-id;purchase-date;payments-date;buyer-email;buyer-name;cpf;buyer-phone-number;sku;product-name;quantity-purchased;currency;item-price;ship-service-level;recipient-name;ship-address-1;ship-address-2;ship-address-3;ship-city;ship-state;ship-postal-code;ship-country;ioss-number
-7;5;2024-05-01;2024-05-02;teste1@example.com;Teste 1;111.141.151-11;1234567890;SKU001;Produto 1;2;USD;10.00;Express;Cliente 1;Rua 1;Número 1;Bairro 1;Cidade 1;Estado 1;123456-789;País 1;IOS001
-8;4;2024-05-02;2024-05-03;teste2@example.com;Teste 2;222.282.222-22;9876543210;SKU002;Produto 2;3;USD;15.50;Standard;Cliente 2;Rua 2;Número 2;Bairro 2;Cidade 2;Estado 2;987654-321;País 2;IOS002
-9;3;2024-05-03;2024-05-04;teste3@example.com;Teste 3;333.333.333-33;5555555555;SKU003;Produto 3;1;EUR;20.75;Standard;Cliente 3;Rua 3;Número 3;Bairro 3;Cidade 3;Estado 3;333333-333;País 3;IOS003
+purchase-date;payments-date;buyer-email;buyer-name;cpf;buyer-phone-number;sku;product-name;quantity-purchased;currency;item-price;ship-service-level;recipient-name;ship-address-1;ship-address-2;ship-address-3;ship-city;ship-state;ship-postal-code;ship-country;ioss-number
+2024-05-07;2024-05-08;janedoe@example.com;Lukao;1113077022;111222333;SKU01;Product 4;5;GBP;25.00;Express;Jane Smith;456 Elm St;324;Suite 200;Anycity;TX;54321;USA;87654321
+2024-05-07;2024-05-08;janedoe@example.com;Sabrina;111230278;111222333;SKU02;Product 5;10;GBP;30.00;Standard;John Doe;123 Main St;324;Apt 101;Anytown;ST;12345;USA;12345678
+2024-05-07;2024-05-08;janedoe@example.com;Jake;111230179;111222333;SKU05;Product 8;17;GBP;135.00;Express;Jane Smith;456 Elm St;22;Suite 200;Anycity;TX;54321;USA;87654321
