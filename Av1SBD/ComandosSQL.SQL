@@ -65,8 +65,6 @@ CREATE TABLE Compras (
 
 -- Tabela temporária para carga de dados
 CREATE TABLE carga_temporaria (
-    order_id INT,
-    order_item_id INT,
     purchase_date DATE,
     payments_date DATE,
     buyer_email VARCHAR(255),
