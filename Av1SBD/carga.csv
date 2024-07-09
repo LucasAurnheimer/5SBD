@@ -1,0 +1,4 @@
+purchase-date;payments-date;buyer-email;buyer-name;cpf;buyer-phone-number;sku;product-name;quantity-purchased;currency;item-price;ship-service-level;recipient-name;ship-address-1;ship-address-2;ship-address-3;ship-city;ship-state;ship-postal-code;ship-country;ioss-number
+2024-05-07;2024-05-08;janedoe@example.com;Lukao;1113077022;111222333;SKU01;Product 4;5;GBP;25.00;Express;Jane Smith;456 Elm St;324;Suite 200;Anycity;TX;54321;USA;87654321
+2024-05-07;2024-05-08;janedoe@example.com;Sabrina;111230278;111222333;SKU02;Product 5;10;GBP;30.00;Standard;John Doe;123 Main St;324;Apt 101;Anytown;ST;12345;USA;12345678
+2024-05-07;2024-05-08;janedoe@example.com;Jake;111230179;111222333;SKU05;Product 8;17;GBP;135.00;Express;Jane Smith;456 Elm St;22;Suite 200;Anycity;TX;54321;USA;87654321
